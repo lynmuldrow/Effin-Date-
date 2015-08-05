@@ -1,0 +1,24 @@
+{
+    "name": "effin' tabs",
+    "description": "It's a fuckin' New Tabs page.",
+    "version": "1.0.6",
+    "short_name": "effin' tabs",
+    "author": "Lyn Muldrow",
+    "manifest_version": 2,
+    "chrome_url_overrides" : {
+        "newtab": "newtab.html"
+    },
+
+    "background": {
+    "persistent": false,
+    "scripts": ["jquery.particleground.min.js"]
+    },
+
+    "content_scripts": [
+{
+   "matches": ["http://*/*", "https://*/*"],
+  "js": ["jquery.particleground.min.js"],
+  "css": ["style.css"]
+}
+ ]
+}
